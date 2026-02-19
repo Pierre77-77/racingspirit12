@@ -32,7 +32,7 @@
 
         header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 50px 20px 20px 20px;
             background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(15,16,20,0) 100%);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
@@ -69,19 +69,23 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 20px 5px 20px;
         }
 
         section {
             margin-bottom: 50px;
             background-color: var(--card-bg);
-            padding: 40px;
+            padding: 40px 40px 10px 40px;
             border-radius: 4px;
             /* La bordure "Premium" demandée */
             border: 1px solid var(--secondary-color); /* Couleur Or pleine par défaut */
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             position: relative;
             overflow: hidden;
+        }
+
+        section:last-of-type {
+            margin-bottom: 10px;
         }
 
         /* Petit accent en coin pour le style */
@@ -104,14 +108,19 @@
 */
 
         h2 {
-            color: #fff;
-            font-size: 1.8rem;
+            color: #2447d6; /* Bleu légèrement plus clair que #1a349c */
+            font-size: 1.2rem;
             margin-top: 0;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 1px solid var(--secondary-color); /* Trait fin 1px mais couleur pleine */
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Supprime la marge du dernier élément pour coller au bord bas */
+        section > *:last-child {
+            margin-bottom: 0;
         }
 
         p {
@@ -156,14 +165,24 @@
         }
 
         .cta-section {
-            text-align: center;
+            /* text-align: center;  Enlevé pour permettre le justifié */
             background: linear-gradient(135deg, #1139c0 0%, #061c6b 100%);
             border: 1px solid #2d5bff;
         }
 
-        .cta-section h2, .cta-section p {
+        .cta-section h2 {
             color: #fff;
+            /* text-align: center; Enlevé pour uniformité */
+        }
+
+        .cta-section p {
+            color: #fff;
+            text-align: justify;
+        }
+
+        .footer p {
             text-align: center;
+            margin-bottom: 0;
         }
 
         .cta-section section::before {
@@ -180,10 +199,9 @@
 
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 5px 20px 20px 20px;
             font-size: 0.9em;
             color: #777;
-            border-top: 1px solid #333;
             margin-bottom: 60px; /* Espace pour le menu bas */
         }
 
@@ -193,7 +211,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #0f2780; /* Bleu Racing foncé */
+            background-color: #1a349c; /* Bleu un peu plus clair */
             display: flex;
             justify-content: space-around;
             align-items: center;
