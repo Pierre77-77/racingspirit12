@@ -1,0 +1,34 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1a1a1a; /* Fond sombre élégant */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 80%; /* Le logo prendra 80% de la largeur sur mobile */
+    max-height: 80vh; /* Ne dépassera pas 80% de la hauteur de l'écran */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Ajoute une légère ombre portée pour le style */
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.construction-text {
+    color: #1139c0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

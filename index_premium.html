@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Spirit 12 - Transmettre la Passion, Cultiver le Plaisir</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <style>
+        :root {
+            --primary-color: #1139c0;
+            --secondary-color: #ecab0f; /* Or/Jaune Racing */
+            --bg-color: #0f1014;
+            --text-color: #f0f0f0;
+            --card-bg: #1a1c23;
+            --border-color: rgba(236, 171, 15, 0.4);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, #1a2238 0%, #0f1014 60%);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(15,16,20,0) 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 20px rgba(17, 57, 192, 0.3));
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .slogan {
+            font-size: 1.1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--secondary-color); /* Retour à la couleur Or standard des vignettes */
+            margin-bottom: 2rem;
+            display: inline-block;
+            padding: 10px 30px;
+            border-top: 1px solid var(--secondary-color); /* Trait Or plein */
+            border-bottom: 1px solid var(--secondary-color); /* Trait Or plein */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            /* La bordure "Premium" demandée */
+            border: 1px solid var(--secondary-color); /* Couleur Or pleine par défaut */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Petit accent en coin pour le style */
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: none;
+        }
+           /* Effet de survol supprimé comme demandé */
+/*
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            border-color: var(--secondary-color);
+        }
+*/
+
+        h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--secondary-color); /* Trait fin 1px mais couleur pleine */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .legend-list {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .legend-list li {
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+
+        .legend-name {
+            display: block;
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #1139c0 0%, #061c6b 100%);
+            border: 1px solid #2d5bff;
+        }
+
+        .cta-section h2, .cta-section p {
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section section::before {
+            display: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.8em;
+            color: #555;
+            margin-bottom: 80px; 
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #333;
+            margin-bottom: 60px; /* Espace pour le menu bas */
+        }
+
+        /* Menu Mobile Style App */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0f2780; /* Bleu Racing foncé */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            opacity: 1;
+            color: #fff;
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .slogan { 
+                font-size: 0.9rem; 
+                padding: 10px;
+                letter-spacing: 2px;
+            }
+            section { padding: 25px; margin-bottom: 30px; }
+            .legend-list { grid-template-columns: 1fr; }
+            .container { padding-bottom: 70px; } /* Ajustement mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <img src="Logo_Racing_Spirit_12_transp.png" alt="Logo Racing Spirit 12" class="logo">
+        <div>
+            <h1 class="slogan">Transmettre la Passion <br> Cultiver le Plaisir</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="philosophie">
+            <h2>Une École de Vie</h2>
+            <p>Racing Spirit 12 est née d’une conviction : <span class="highlight">le sport automobile est avant tout une école de vie</span>. En plaçant notre structure sous l’égide du numéro 12 — symbole de la détermination de Senna et du panache de Villeneuve — nous ne cherchons pas à fabriquer un champion à tout prix, mais à transmettre des valeurs de respect, de discipline et de dépassement de soi.</p>
+        </section>
+
+        <section id="histoire">
+            <h2>Une Histoire de Famille</h2>
+            <p>Notre association est le fruit d’une transmission familiale débutée il y a quatre générations.</p>
+            <p>De la présidence du Karting Club d’Aire-sur-la-Lys par <strong>Yves Kerhello</strong> dans les années 70, à l'expertise de <strong>Pierre Kerhello</strong> (pilote et figure emblématique du karting des Etards), et la passion de <strong>Sandra Kerhello</strong>, aujourd’hui, c’est au tour de <strong>Louis Lamandé</strong> d’écrire sa propre histoire sur la piste.</p>
+        </section>
+
+        <section id="epano">
+            <h2>Notre Philosophie</h2>
+            <p>Loin de la pression des résultats immédiats, notre philosophie est claire : <span class="highlight">l’épanouissement avant la performance</span>. Nous refusons de forcer le destin. Notre rôle est de fournir à Louis un cadre technique et logistique bienveillant pour qu'il puisse explorer son potentiel, apprendre de ses erreurs et, surtout, prendre du plaisir à chaque virage.</p>
+            <p>Soutenir Racing Spirit 12, c’est accompagner un jeune pilote dans la découverte de ses capacités et le soutenir dans sa progression, à son rythme. C’est investir dans une aventure humaine où la réussite ne se mesure pas seulement au trophée, mais au sourire sous le casque et à la fierté d'avoir bien appris.</p>
+        </section>
+
+        <section id="le12">
+            <h2>L'Égide du Numéro 12</h2>
+            <p>En baptisant notre structure <strong>Racing Spirit 12</strong>, nous avons voulu placer les premiers virages de nos jeunes pilotes sous l'égide d'un numéro de légende. Le 12, c'est bien plus qu'un chiffre sur une carrosserie. C'est l'héritage de géants :</p>
+            
+            <ul class="legend-list">
+                <li>
+                    <span class="legend-name">Ayrton Senna</span>
+                    La détermination absolue, sacré pour la première fois avec ce numéro en 1988.
+                </li>
+                <li>
+                    <span class="legend-name">Gilles Villeneuve</span>
+                    Le panache et l'audace, domptant sa monture avec un courage légendaire.
+                </li>
+                <li>
+                    <span class="legend-name">Niki Lauda</span>
+                    La résilience et la précision, menant le n°12 à la victoire du monde en 1975.
+                </li>
+                <li>
+                    <span class="legend-name">Nigel Mansell</span>
+                    La fougue indomptable, portant le 12 avec une combativité qui a marqué toute une génération.
+                </li>
+                <li>
+                    <span class="legend-name">Jackie Stewart</span>
+                    À Monaco en 1966, il gagna la deuxième victoire de sa carrière au volant de la BRM numéro 12.
+                </li>
+                <li>
+                    <span class="legend-name">Jack Brabham</span>
+                    En France (Reims), le 3 juillet 1966, il gagna le Grand Prix, prologue de son titre mondial.
+                </li>
+            </ul>
+
+            <p style="margin-top: 30px;">
+                C'est la volonté de transmettre ces valeurs à la nouvelle génération : <strong>le respect de la piste, le goût de l'effort et la quête de l'excellence.</strong>
+            </p>
+        </section>
+
+        <section class="cta-section" id="soutien">
+            <h2>Soutenir l'Aventure</h2>
+            <p>Soutenir notre association, c'est accompagner de jeunes talents qui s'élancent avec cet esprit de compétition, un esprit forgé par les légendes, et porté aujourd’hui par ceux qui rêvent de suivre leurs traces.</p>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Racing Spirit 12. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Menu de Navigation Mobile (Sticky Bottom) -->
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>Accueil</span>
+        </a>
+        <a href="#philosophie" class="nav-item">
+            <span class="nav-icon">🎓</span>
+            <span>Philo</span>
+        </a>
+        <a href="#histoire" class="nav-item">
+            <span class="nav-icon">📖</span>
+            <span>Histoire</span>
+        </a>
+        <a href="#le12" class="nav-item">
+            <span class="nav-icon">🏁</span>
+            <span>Le 12</span>
+        </a>
+        <a href="#soutien" class="nav-item">
+            <span class="nav-icon">🤝</span>
+            <span>Soutien</span>
+        </a>
+    </nav>
+</body>
+</html>
