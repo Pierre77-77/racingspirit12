@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #1139c0;
+    --secondary-color: #ecab0f; /* Or/Jaune Racing */
+    --bg-color: #0f1014;
+    --text-color: #f0f0f0;
+    --card-bg: #1a1c23;
+    --border-color: rgba(236, 171, 15, 0.4);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 0%, #1a2238 0%, #0f1014 60%);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(15,16,20,0) 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    max-width: 280px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 20px rgba(17, 57, 192, 0.3));
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.slogan {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--secondary-color); /* Retour à la couleur Or standard des vignettes */
+    margin-bottom: 1.3rem;
+    display: inline-block;
+    padding: 10px 30px;
+    border-top: 1px solid var(--secondary-color); /* Trait Or plein */
+    border-bottom: 1px solid var(--secondary-color); /* Trait Or plein */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 5px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    background-color: var(--card-bg);
+    padding: 15px 40px 10px 40px;
+    border-radius: 4px;
+    /* La bordure "Premium" demandée */
+    border: 1px solid #2447d6; /* Couleur Bleu */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+section:last-of-type {
+    margin-bottom: 10px;
+}
+
+/* Petit accent en coin pour le style */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: none;
+}
+
+h2 {
+    color: var(--secondary-color); /* Titres en Or */
+    font-size: 1.2rem;
+    font-weight: 300; /* Mettre les titres en fin comme le slogan */
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2447d6; /* Trait fin 1px Bleu pour rappel */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Supprime la marge du dernier élément pour coller au bord bas */
+section > *:last-child {
+    margin-bottom: 0;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #fff;
+}
+
+strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.legend-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.legend-list li {
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 4px;
+}
+
+.legend-name {
+    display: block;
+    font-weight: 700;
+    color: #ffffff; /* Blanc */
+    font-size: 1.0em;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.cta-section {
+    /* text-align: center;  Enlevé pour permettre le justifié */
+    background: linear-gradient(135deg, #1139c0 0%, #061c6b 100%);
+    border: 1px solid #2d5bff;
+}
+
+.cta-section h2 {
+    color: var(--secondary-color);
+    /* text-align: center; Enlevé pour uniformité */
+}
+
+.cta-section p {
+    color: #fff;
+    text-align: justify;
+}
+
+.footer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.cta-section section::before {
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 5px 20px 20px 20px;
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 60px; /* Espace pour le menu bas */
+    margin-top: -30px; /* Réduit l'espace au-dessus du footer */
+}
+
+/* Menu Mobile Style App */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a349c; /* Bleu un peu plus clair */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    opacity: 1;
+    color: #fff;
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    .slogan { 
+        font-size: 0.9rem; 
+        padding: 10px;
+        letter-spacing: 2px;
+    }
+    section { padding: 12px 20px 12px 20px; margin-bottom: 30px; }
+    .legend-list { grid-template-columns: 1fr; }
+    .container { padding-bottom: 70px; } /* Ajustement mobile */
+}
