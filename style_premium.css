@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1139c0;
-    --secondary-color: #ecab0f; /* Or/Jaune Racing */
+    --secondary-color: #FFD700; /* Or Vif */
     --bg-color: #0f1014;
     --text-color: #f0f0f0;
     --card-bg: #1a1c23;
@@ -64,8 +64,12 @@ section {
     background-color: var(--card-bg);
     padding: 15px 40px 10px 40px;
     border-radius: 4px;
-    /* La bordure "Premium" demandée */
-    border: 1px solid #2447d6; /* Couleur Bleu */
+    
+    /* Bordure fine avec dégradé et coins arrondis */
+    background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+                linear-gradient(to bottom, #728cff, #2447d6) border-box;
+    border: 1px solid transparent; /* Essentiel pour que le dégradé fonctionne */
+
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     position: relative;
     overflow: hidden;
@@ -88,12 +92,12 @@ section::before {
 
 h2 {
     color: var(--secondary-color); /* Titres en Or */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300; /* Mettre les titres en fin comme le slogan */
     margin-top: 0;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #2447d6; /* Trait fin 1px Bleu pour rappel */
+    border-bottom: 1px solid #4d6eff; /* Trait fin 1px Bleu plus clair */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
