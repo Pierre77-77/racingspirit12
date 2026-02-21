@@ -178,16 +178,25 @@ strong {
     padding: 5px 20px 20px 20px;
     font-size: 0.9em;
     color: #777;
-    margin-bottom: 60px; /* Espace pour le menu bas */
-    margin-top: -30px; /* Réduit l'espace au-dessus du footer */
+    margin-bottom: 60px; /* Espace pour le menu bas mobile */
+    margin-top: -30px; /* Réduit l'espace au-dessus du footer pour mobile */
+}
+
+/* Sur écran Desktop/Tablette : Ajustement pour décoller le footer */
+@media (min-width: 769px) {
+    .footer {
+        margin-top: 10px; /* Plus d'espace sur version ordinateur */
+    }
 }
 
 /* Menu Mobile Style App */
 .bottom-nav {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 900px; /* Même largeur max que le container */
     background-color: #1a349c; /* Bleu un peu plus clair */
     display: flex;
     justify-content: space-around;
@@ -195,6 +204,8 @@ strong {
     padding: 5px 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
     z-index: 1000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .nav-item {
