@@ -27,7 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     // En-têtes de l'email
-    $email_headers = "From: $nom <$email>";
+    // Utiliser une adresse du domaine pour le From pour éviter d'être bloqué par le SPAM (SPF/DKIM)
+    $email_headers = "From: contact@racingspirit12.fr\r\n";
+    $email_headers .= "Reply-To: $email\r\n";
+    $email_headers .= "X-Mailer: PHP/" . phpversion();
 
     // Envoi de l'email
     if (mail($recipient, $subject, $email_content, $email_headers)) {
